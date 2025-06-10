@@ -209,7 +209,7 @@ public class Main {
                 System.exit(ErrorCodes.SUCCESS);
             } else {
                 while (true) {
-                    synchronized (Main.class) {
+                    synchronized (waitObject) {
                         try {
                             waitObject.wait(60_000);
                         } catch (InterruptedException e) {
